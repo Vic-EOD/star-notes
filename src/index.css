@@ -5,3 +5,19 @@
 body {
   @apply bg-slate-700;
 }
+
+.star-section {
+  @apply p-8 bg-gray-200 flex gap-6 rounded-lg items-center;
+}
+
+.star-letter {
+  @apply text-red-600 font-bold text-6xl;
+}
+
+.star-description {
+  @apply leading-relaxed font-medium text-left;
+}
+
+.story {
+  @apply flex p-6 gap-6 items-center w-full justify-evenly bg-white rounded-xl shadow-md transition ease-linear delay-75 duration-200 hover:scale-105;
+}

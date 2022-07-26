@@ -1,22 +1,29 @@
-const Details = ({ title, situation, task, action, result }) => {
+import { useParams } from "react-router-dom";
+import stories from "./stories";
+
+const Details = () => {
+  const { id } = useParams();
+
+  const story = stories.filter((story) => story.id == id)[0];
+
   return (
-    <div>
-      <h1 className="text-6xl">{title}</h1>
-      <div>
-        <span className="text-red-600 font-bold text-6xl">S</span>
-        <p>{situation}</p>
+    <div className="p-8 gap-6 rounded-lg w-4/6 flex flex-col">
+      <h1 className="text-4xl">{story.title}</h1>
+      <div className="star-section">
+        <span className="star-letter">S</span>
+        <p className="star-description">{story.situation}</p>
       </div>
-      <div>
-        <span>T</span>
-        <p>{task}</p>
+      <div className="star-section">
+        <span className="star-letter">T</span>
+        <p className="star-description">{story.task}</p>
       </div>
-      <div>
-        <span>A</span>
-        <p>{action}</p>
+      <div className="star-section">
+        <span className="star-letter">A</span>
+        <p className="star-description">{story.action}</p>
       </div>
-      <div>
-        <span>R</span>
-        <p>{result}</p>
+      <div className="star-section">
+        <span className="star-letter">R</span>
+        <p className="star-description">{story.result}</p>
       </div>
     </div>
   );

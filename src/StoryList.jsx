@@ -1,38 +1,9 @@
-const Story = ({ title, shortDescription }) => {
-  return (
-    <div className="flex p-6 gap-6 items-center justify-evenly w-6/12 bg-white rounded-xl shadow-md">
-      <h2 className="text-3xl text-red-700 font-semibold">{title}</h2>
-      <p className="align-middle text-lg">{shortDescription}</p>
-      <div className="flex gap-4 justify-self-end">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-6 w-6 hover:cursor-pointer"
-          viewBox="0 0 20 20"
-          fill="currentColor"
-        >
-          <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
-        </svg>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-6 w-6 hover:cursor-pointer"
-          viewBox="0 0 20 20"
-          fill="currentColor"
-        >
-          <path
-            fillRule="evenodd"
-            d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
-            clipRule="evenodd"
-          />
-        </svg>
-      </div>
-    </div>
-  );
-};
+import Story from "./Story";
 
 const StoryList = ({ stories }) => {
   return (
-    <div className="relative flex flex-col gap-6 justify-center items-center">
-      <div className="absolute bottom-0 right-5 hover:cursor-pointer">
+    <div className="flex flex-col gap-6 justify-center items-center">
+      <div className="absolute bottom-5 right-10 hover:cursor-pointer">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-10 w-10"
@@ -49,12 +20,13 @@ const StoryList = ({ stories }) => {
       {!stories.length ? (
         <h1>No Stories Found</h1>
       ) : (
-        stories.map((story, index) => {
+        stories.map((story) => {
           return (
             <Story
               title={story.title}
               shortDescription={`${story.situation.substring(0, 30)}...`}
-              key={index}
+              key={story.id}
+              id={story.id}
             />
           );
         })

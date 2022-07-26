@@ -1,5 +1,6 @@
 const stories = [
   {
+    id: 1,
     title: "Title 1",
     situation:
       "Team needed a Tech Analyst to become comfortable with the Environmental aspect of ESG in order to help clients such as Costco and Capital Group develop solutions",
@@ -10,6 +11,7 @@ const stories = [
       "We signed several major contracts with customers including Costco, Nike and Starbucks as well as securing several deals for demos and pilots delivering the firm an increase of x% year over year in ESG sales as well as an x% increase in annual recurring revenue",
   },
   {
+    id: 2,
     title: "Title 2",
     situation:
       "We had to develop an application for a client that could create, track , and report on ESG surveys. The goal was to have baseline surveys for tracking current sentiment and status on key issues followed by a more thorough survey for goals and commitments.",
@@ -20,6 +22,7 @@ const stories = [
       "We ended up going this route and as a result we were able to turn the tool into a more balanced survey platform where we could better extend functionality as well as topics and areas of interest. We had better choices for databases, UI, reporting, and even developer support allowing us to have better long term results. In the end we built a system that was capable of handling additional surveys and survey types like IT and supply chain as well as letting clients develop templates for custom surveys. This resulted in a 5x opportunity increase on day 1 compared to the Power Platform option.",
   },
   {
+    id: 3,
     title: "Title 3",
     situation:
       "Costco had seen an initial presentation and thought that our strategies were not clear enough to understand at a glance.",
