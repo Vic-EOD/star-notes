@@ -1,9 +1,9 @@
 const Details = ({ title, situation, task, action, result }) => {
   return (
-    <>
-      <h1>{title}</h1>
+    <div>
+      <h1 className="text-6xl">{title}</h1>
       <div>
-        <span>S</span>
+        <span className="text-red-600 font-bold text-6xl">S</span>
         <p>{situation}</p>
       </div>
       <div>
@@ -18,7 +18,7 @@ const Details = ({ title, situation, task, action, result }) => {
         <span>R</span>
         <p>{result}</p>
       </div>
-    </>
+    </div>
   );
 };
 

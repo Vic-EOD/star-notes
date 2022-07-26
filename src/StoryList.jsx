@@ -1,7 +1,7 @@
 const Story = ({ title, shortDescription }) => {
   return (
-    <div className="flex p-4 gap-6 items-center justify-evenly w-6/12 bg-white rounded-xl shadow-md">
-      <h2 className="text-3xl text-red-600 font-semibold">{title}</h2>
+    <div className="flex p-6 gap-6 items-center justify-evenly w-6/12 bg-white rounded-xl shadow-md">
+      <h2 className="text-3xl text-red-700 font-semibold">{title}</h2>
       <p className="align-middle text-lg">{shortDescription}</p>
       <div className="flex gap-4 justify-self-end">
         <svg
@@ -31,7 +31,21 @@ const Story = ({ title, shortDescription }) => {
 
 const StoryList = ({ stories }) => {
   return (
-    <div className="flex flex-col gap-5 justify-center items-center">
+    <div className="relative flex flex-col gap-6 justify-center items-center">
+      <div className="absolute bottom-0 right-5 hover:cursor-pointer">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-10 w-10"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+        >
+          <path
+            fillRule="evenodd"
+            d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
+            clipRule="evenodd"
+          />
+        </svg>
+      </div>
       {!stories.length ? (
         <h1>No Stories Found</h1>
       ) : (
