@@ -10,7 +10,7 @@ const StoryList = ({ stories }) => {
           return (
             <Story
               title={story.title}
-              shortDescription={story.situation.substring(0, 10)}
+              shortDescription={story.situation.substring(0, 30)}
               key={index}
             />
           );
