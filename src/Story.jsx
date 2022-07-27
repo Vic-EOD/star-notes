@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const Story = ({ title, shortDescription, id }) => {
+const Story = ({ title, shortDescription, id, deleteStory }) => {
   return (
     <Link to={`/details/${id}`} className="story">
       <h2 className="text-3xl text-red-700 font-semibold">{title}</h2>
@@ -19,6 +19,7 @@ const Story = ({ title, shortDescription, id }) => {
           className="h-6 w-6 hover:cursor-pointer"
           viewBox="0 0 20 20"
           fill="currentColor"
+          onClick={deleteStory}
         >
           <path
             fillRule="evenodd"

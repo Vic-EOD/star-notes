@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import stories from "./stories";
 import Details from "./Details";
 import "./App.css";
+import StarForm from "./StarForm";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<StoryList stories={stories} />} />
           <Route path="/details/:id" element={<Details />} />
+          <Route path="/new" element={<StarForm />} />
         </Routes>
       </BrowserRouter>
     </div>
